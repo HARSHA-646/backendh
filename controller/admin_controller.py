@@ -31,7 +31,7 @@ def user_login(request: Request, user_details: UserLoginRequest, db: Session = D
             return JSONResponse(status_code=status.HTTP_200_OK,content={'data':welcomeData})
         return JSONResponse(status_code=status.HTTP_400_BAD_REQUEST,content='Invalid Password')
     return JSONResponse(status_code=status.HTTP_400_BAD_REQUEST,content='Invalid Username')
-  
+
 @router.get('/users-list')
 def add_addon_course(request: Request,
                db: Session = Depends(get_db),
